@@ -31,6 +31,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // fontawesome
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,6 +61,12 @@ export default {
     stories: [],
     webpackFinal(config) {
       return config
+    },
+  },
+
+  fontawesome: {
+    icons: {
+      solid: ['faArrowCircleLeft', 'faArrowCircleRight'],
     },
   },
 }
