@@ -15,6 +15,6 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  title: 'Test name',
-  description: 'Test description',
+  title: 'TASK NAME',
+  description: 'TASK DESCRIPTION',
 }
