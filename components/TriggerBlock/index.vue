@@ -1,6 +1,6 @@
 <template>
   <div class="trigger">
-    <BasicBlock :label="trigger.name" class="bg-red-700 text-white" />
+    <BasicBlock :label="trigger.name" class="bg-red-300 text-red-800" />
   </div>
 </template>
 

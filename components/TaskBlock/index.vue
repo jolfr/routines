@@ -1,6 +1,6 @@
 <template>
   <div class="task">
-    <BasicBlock :label="task.name" class="bg-teal-800 text-white" />
+    <BasicBlock :label="task.name" class="bg-teal-300 text-teal-800" />
   </div>
 </template>
 
