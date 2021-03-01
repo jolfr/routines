@@ -33,16 +33,24 @@ export default {
   methods: {
     startTimer() {
       this.timePassed = 0
-      this.timerInterval = setInterval(() => (this.timePassed += 1), 1000)
+      this.timerInterval = setInterval(() => this.tickOrResetTimer(), 1000)
     },
     pauseTimer() {
-      this.timerInterval = null
+      this.timerInterval = setInterval(null)
     },
     resumeTimer() {
-      this.timerInterval = setInterval(() => (this.timePassed += 1), 1000)
+      this.timerInterval = setInterval(() => this.tickOrResetTimer(), 1000)
     },
     resetTimer() {
+      this.timerInterval = setInterval(null)
       this.timePassed = 0
+    },
+    tickOrResetTimer() {
+      if (this.timePassed === this.timeLimit) {
+        this.resetTimer()
+      } else {
+        this.timePassed += 1
+      }
     },
   },
 }
