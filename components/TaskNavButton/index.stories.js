@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions'
 import TaskNavButton from './index'
 
 export default {
@@ -7,10 +8,15 @@ export default {
   excludeStories: /.*Data$/,
 }
 
+export const actionsData = {
+  onNavigate: action('navigate'),
+}
+
 const Template = (args, { argTypes }) => ({
   components: { TaskNavButton },
   props: Object.keys(argTypes),
-  template: '<TaskNavButton v-bind="$props"/>',
+  methods: actionsData,
+  template: '<TaskNavButton v-bind="$props" @navigate="onNavigate"/>',
 })
 
 const Default = Template.bind({})

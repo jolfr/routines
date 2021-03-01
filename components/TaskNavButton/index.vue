@@ -1,9 +1,16 @@
 <template>
-  <div class="nav-button border-2 rounded-full cursor-pointer px-2">
-    <div v-if="type === 'NEXT'">NEXT</div>
-    <div v-else-if="type === 'PREV'">PREV</div>
+  <a
+    class="nav-button cursor-pointer text-4xl"
+    @click="$emit('navigate', type)"
+  >
+    <div v-if="type === 'NEXT'">
+      <font-awesome-icon icon="arrow-circle-right" />
+    </div>
+    <div v-else-if="type === 'PREV'">
+      <font-awesome-icon icon="arrow-circle-left" />
+    </div>
     <div v-else>NULL</div>
-  </div>
+  </a>
 </template>
 
 <script>
