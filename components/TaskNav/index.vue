@@ -1,5 +1,8 @@
 <template>
-  <div class="task-nav inline-flex space-x-0 justify-items-center">
+  <div
+    class="task-nav inline-flex space-x-0 justify-items-center"
+    :class="dark ? ' text-white' : ''"
+  >
     <TaskNavButton type="PREV" @navigate="$emit('prev-task', task)" />
     <TaskLabel :title="task.title" :description="task.desc" class="py-2" />
     <TaskNavButton type="NEXT" @navigate="$emit('next-task', task)" />
@@ -19,6 +22,11 @@ export default {
       required: true,
       default: () => ({ title: '', desc: '' }),
       validator: (task) => ['title', 'desc'].every((key) => key in task),
+    },
+    dark: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
 }

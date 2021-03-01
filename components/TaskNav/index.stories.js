@@ -20,23 +20,17 @@ const Template = (args, { argTypes }) => ({
     '<TaskNav v-bind="$props" @prev-task="onPrev" @next-task="onNext" />',
 })
 
-export const Default = Template.bind({})
-Default.args = {
+export const Light = Template.bind({})
+Light.args = {
   task: {
     title: 'TEST TITLE',
     desc: 'TEST DESCRIPTION',
   },
+  dark: false,
 }
 
-const DarkTemplate = (args, { argTypes }) => ({
-  components: { TaskNav },
-  props: Object.keys(argTypes),
-  methods: actionsData,
-  template:
-    '<TaskNav v-bind="$props" @prev-task="onPrev" @next-task="onNext" class="text-white bg-indigo-900" />',
-})
-
-export const Dark = DarkTemplate.bind({})
+export const Dark = Template.bind({})
 Dark.args = {
-  ...Default.args,
+  task: Light.args.task,
+  dark: true,
 }
