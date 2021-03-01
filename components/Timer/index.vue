@@ -32,7 +32,17 @@ export default {
   },
   methods: {
     startTimer() {
+      this.timePassed = 0
       this.timerInterval = setInterval(() => (this.timePassed += 1), 1000)
+    },
+    pauseTimer() {
+      this.timerInterval = null
+    },
+    resumeTimer() {
+      this.timerInterval = setInterval(() => (this.timePassed += 1), 1000)
+    },
+    resetTimer() {
+      this.timePassed = 0
     },
   },
 }

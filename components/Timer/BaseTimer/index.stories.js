@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions'
 import BaseTimer from './index'
 
 export default {
@@ -7,10 +8,15 @@ export default {
   excludeStories: /.*Data$/,
 }
 
+export const actionsData = {
+  onToggle: action('toggle'),
+}
+
 const Template = (args, { argTypes }) => ({
   components: { BaseTimer },
   props: Object.keys(argTypes),
-  template: '<BaseTimer v-bind="$props" />',
+  methods: actionsData,
+  template: '<BaseTimer v-bind="$props" @toggle="onToggle"/>',
 })
 
 export const Default = Template.bind({})
