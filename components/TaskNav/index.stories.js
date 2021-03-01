@@ -27,3 +27,16 @@ Default.args = {
     desc: 'TEST DESCRIPTION',
   },
 }
+
+const DarkTemplate = (args, { argTypes }) => ({
+  components: { TaskNav },
+  props: Object.keys(argTypes),
+  methods: actionsData,
+  template:
+    '<TaskNav v-bind="$props" @prev-task="onPrev" @next-task="onNext" class="text-white bg-indigo-900" />',
+})
+
+export const Dark = DarkTemplate.bind({})
+Dark.args = {
+  ...Default.args,
+}
