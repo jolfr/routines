@@ -11,7 +11,7 @@
       <!-- This will be the content of the popover -->
       <template slot="popover">
         <div
-          class="rounded-full shadow w-full italic text-xs p-4 text-black bg-white"
+          class="rounded-2xl shadow w-full italic text-xs p-4 text-black bg-white"
         >
           <p>
             {{ description }}
