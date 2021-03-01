@@ -1,4 +1,10 @@
-<template><div></div></template>
+<template>
+  <div class="rounded-full shadow hover:shadow-md cursor-pointer">
+    <div class="p-4 font-mono text-center font-bold text-lg">
+      {{ block.label }}
+    </div>
+  </div>
+</template>
 
 <script>
 export default {
