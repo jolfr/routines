@@ -1,6 +1,6 @@
 <template>
   <a
-    class="nav-button cursor-pointer text-4xl"
+    class="nav-button cursor-pointer text-4xl w-auto flex border-0 p-0 m-0"
     @click="$emit('navigate', type)"
   >
     <div v-if="type === 'NEXT'">
