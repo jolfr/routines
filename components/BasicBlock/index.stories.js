@@ -15,8 +15,5 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  block: {
-    label: 'Test Label',
-    type: 'Generic Type',
-  },
+  label: 'Test Label',
 }
