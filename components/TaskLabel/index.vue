@@ -1,9 +1,9 @@
 <template>
-  <div class="task-label">
+  <div class="task-label font-mono">
     <v-popover trigger="hover" placement="top">
       <!-- This will be the popover target (for the events and position) -->
       <button class="tooltip-target b3">
-        <div class="px-2">
+        <div class="px-2 font-bold text-2xl">
           {{ title }}
         </div>
       </button>

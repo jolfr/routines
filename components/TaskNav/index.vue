@@ -1,7 +1,7 @@
 <template>
   <div class="task-nav inline-flex space-x-0 justify-items-center">
     <TaskNavButton type="PREV" @navigate="$emit('prev-task', task)" />
-    <TaskLabel :title="task.title" :description="task.desc" />
+    <TaskLabel :title="task.title" :description="task.desc" class="py-2" />
     <TaskNavButton type="NEXT" @navigate="$emit('next-task', task)" />
   </div>
 </template>
