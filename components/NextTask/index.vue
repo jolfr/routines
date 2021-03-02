@@ -1,5 +1,5 @@
 <template>
-  <div class="NextTask">
+  <div class="NextTask bg-yellow-500">
     <Slider text="-> -> Next Task -> ->" @confirm="$emit('next')"></Slider>
   </div>
 </template>

@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <Timer time-limit="300" />
-    <NextTask />
+  <div class="flex-row justify-self-center h-screen bg-blue-400">
+    <div class="flex bg-indigo-900">
+      <Timer time-limit="300" />
+    </div>
+    <div class="flex bg-indigo-900">
+      <NextTask />
+    </div>
   </div>
 </template>
 
