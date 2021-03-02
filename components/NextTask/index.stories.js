@@ -9,7 +9,7 @@ export default {
 }
 
 export const actionsData = {
-  onNext: action('Next Task'),
+  onNext: action('next'),
 }
 
 const Template = (args, { argTypes }) => ({
