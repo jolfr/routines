@@ -19,7 +19,27 @@ const Template = (args, { argTypes }) => ({
   template: '<BaseTimer v-bind="$props" @toggle="onToggle"/>',
 })
 
-export const Default = Template.bind({})
-Default.args = {
-  timeLeft: 60,
+export const Full = Template.bind({})
+Full.args = {
+  timeStat: [20, 1],
+}
+
+export const ThreeQuarter = Template.bind({})
+ThreeQuarter.args = {
+  timeStat: [15, 0.75],
+}
+
+export const Half = Template.bind({})
+Half.args = {
+  timeStat: [10, 0.5],
+}
+
+export const Quarter = Template.bind({})
+Quarter.args = {
+  timeStat: [5, 0.25],
+}
+
+export const Done = Template.bind({})
+Done.args = {
+  timeStat: [0, 0],
 }
