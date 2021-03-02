@@ -96,8 +96,6 @@ export default {
   justify-content: center;
   /* Sort of an arbitrary number; adjust to your liking */
   font-size: 48px;
-  /* One second aligns with the speed of the countdown timer */
-  transition: 1s linear all;
   color: currentColor;
 }
 
@@ -109,8 +107,6 @@ export default {
   /* Makes sure the animation starts at the top of the circle */
   transform: rotate(90deg);
   transform-origin: center;
-  /* One second aligns with the speed of the countdown timer */
-  transition: 1s linear all;
   /* Allows the ring to change color when the color value updates */
   stroke: currentColor;
 }
