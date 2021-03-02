@@ -31,14 +31,14 @@
 export default {
   name: 'BaseTimer',
   props: {
-    timeLeft: {
-      type: Number,
+    timeStat: {
+      type: Array,
       required: true,
     },
   },
   computed: {
     formattedTimeLeft() {
-      const timeLeft = this.timeLeft
+      const timeLeft = this.timeStat[0]
       // The largest round integer less than or equal to the result of time divided being by 60.
       const minutes = Math.floor(timeLeft / 60)
       // Seconds are the remainder of the time divided by 60 (modulus operator)
@@ -55,10 +55,10 @@ export default {
       // eslint-disable-next-line no-console
       console.log('circleDasharray')
       // eslint-disable-next-line no-console
-      console.log(this.timeFraction)
+      console.log(this.timeStat[1])
       // eslint-disable-next-line no-console
-      console.log(`${(this.timeFraction * 283).toFixed(0)} 283`)
-      return `${(this.timeFraction * 283).toFixed(0)} 283`
+      console.log(`${(this.timeStat[1] * 283).toFixed(0)} 283`)
+      return `${(this.timeStat[1] * 283).toFixed(0)} 283`
     },
     // Divides time left by the defined time limit.
     timeFraction() {

@@ -1,5 +1,7 @@
 <template>
-  <div><BaseTimer :time-left="timeLeft" @toggle="toggleTimer" /></div>
+  <div>
+    <BaseTimer :time-stat="timeStat" @toggle="toggleTimer" />
+  </div>
 </template>
 
 <script>
@@ -24,8 +26,11 @@ export default {
     }
   },
   computed: {
-    timeLeft() {
-      return this.timeLimit - this.timePassed
+    timeStat() {
+      const timeLeft = this.timeLimit - this.timePassed
+      const rawTimeFrac = timeLeft / this.timeLimit
+      const timeFrac = rawTimeFrac - (1 / this.timeLimit) * (1 - rawTimeFrac)
+      return [timeLeft, timeFrac]
     },
   },
   methods: {
