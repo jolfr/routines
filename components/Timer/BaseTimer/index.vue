@@ -54,10 +54,6 @@ export default {
     circleDasharray() {
       return `${(this.timeStat[1] * 283).toFixed(0)} 283`
     },
-    // Divides time left by the defined time limit.
-    timeFraction() {
-      return this.timeLeft / this.timeLimit
-    },
   },
 }
 </script>
