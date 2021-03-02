@@ -1,20 +1,20 @@
-import NextTask from './index'
+import Slider from './index'
 
 export default {
-  title: 'Next Task',
-  component: NextTask,
+  title: 'Slider',
+  component: Slider,
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 }
 
 const Template = (args, { argTypes }) => ({
-  components: { NextTask },
+  components: { Slider },
   props: Object.keys(argTypes),
-  template: '<NextTask v-bind="$props"/>',
+  template: '<Slider v-bind="$props"/>',
 })
 
 export const Default = Template.bind({})
 Default.args = {
-  text: 'Default Text',
-  successText: 'Success Text',
+  text: 'Slide this way ->',
+  successText: 'Woohoo!',
 }

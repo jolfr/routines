@@ -1,5 +1,6 @@
 <template>
   <drag-verify
+    :width="width"
     :text="text"
     :success-text="successText"
   ></drag-verify>
@@ -9,7 +10,7 @@
 import dragVerify from 'vue-drag-verify'
 
 export default {
-  name: 'NextTask',
+  name: 'Slider',
   components: {
     dragVerify,
   },
@@ -21,6 +22,10 @@ export default {
     successText: {
       type: String,
       required: true,
+    },
+    width: {
+      type: Number,
+      default: 600,
     },
   },
 }
