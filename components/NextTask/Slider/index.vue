@@ -1,9 +1,12 @@
 <template>
   <drag-verify
+    class="border-2 border-dashed border-opacity-50"
     :width="width"
     :text="text"
-    :success-text="successText"
     background="transparent"
+    progress-bar-bg="transparent"
+    completed-bg="transparent"
+    @passcallback="$emit('confirm')"
   ></drag-verify>
 </template>
 
@@ -17,10 +20,6 @@ export default {
   },
   props: {
     text: {
-      type: String,
-      required: true,
-    },
-    successText: {
       type: String,
       required: true,
     },

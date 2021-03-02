@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions'
 import Slider from './index'
 
 export default {
@@ -7,14 +8,18 @@ export default {
   excludeStories: /.*Data$/,
 }
 
+export const actionsData = {
+  onConfirm: action('confirm'),
+}
+
 const Template = (args, { argTypes }) => ({
   components: { Slider },
   props: Object.keys(argTypes),
-  template: '<Slider v-bind="$props"/>',
+  methods: actionsData,
+  template: '<Slider v-bind="$props" @confirm="onConfirm"/>',
 })
 
 export const Default = Template.bind({})
 Default.args = {
   text: 'Slide this way ->',
-  successText: 'Woohoo!',
 }
