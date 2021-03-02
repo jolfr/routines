@@ -37,6 +37,10 @@ export default {
       type: Array,
       required: true,
     },
+    color: {
+      type: String,
+      default: 'black',
+    },
   },
   computed: {
     formattedTimeLeft() {
@@ -92,6 +96,9 @@ export default {
   justify-content: center;
   /* Sort of an arbitrary number; adjust to your liking */
   font-size: 48px;
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+  color: currentColor;
 }
 
 .base-timer__path-remaining {
@@ -105,7 +112,7 @@ export default {
   /* One second aligns with the speed of the countdown timer */
   transition: 1s linear all;
   /* Allows the ring to change color when the color value updates */
-  stroke: rgb(65, 184, 131);
+  stroke: currentColor;
 }
 
 .base-timer__svg {

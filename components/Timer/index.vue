@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-red-600 hover:text-red-500">
     <BaseTimer :time-stat="timeStat" @toggle="toggleTimer" />
   </div>
 </template>
