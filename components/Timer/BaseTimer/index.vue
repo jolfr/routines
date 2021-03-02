@@ -52,12 +52,6 @@ export default {
     },
     // Update the dasharray value as time passes, starting with 283
     circleDasharray() {
-      // eslint-disable-next-line no-console
-      console.log('circleDasharray')
-      // eslint-disable-next-line no-console
-      console.log(this.timeStat[1])
-      // eslint-disable-next-line no-console
-      console.log(`${(this.timeStat[1] * 283).toFixed(0)} 283`)
       return `${(this.timeStat[1] * 283).toFixed(0)} 283`
     },
     // Divides time left by the defined time limit.
