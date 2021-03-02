@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions'
 import NextTask from './index'
 
 export default {
@@ -7,10 +8,15 @@ export default {
   excludeStories: /.*Data$/,
 }
 
+export const actionsData = {
+  onNext: action('Next Task'),
+}
+
 const Template = (args, { argTypes }) => ({
   components: { NextTask },
   props: Object.keys(argTypes),
-  template: '<NextTask v-bind="$props"/>',
+  methods: actionsData,
+  template: '<NextTask v-bind="$props" @next="onNext"/>',
 })
 
 export const Default = Template.bind({})
