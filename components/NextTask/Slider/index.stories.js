@@ -14,3 +14,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Default = Template.bind({})
+Default.args = {
+  text: 'Default Text',
+  successText: 'Success Text',
+}
