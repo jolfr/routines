@@ -1,5 +1,5 @@
 <template>
-  <div><BaseTimer :time-left="timeLeft" /></div>
+  <div><BaseTimer :time-left="timeLeft" @toggle="toggleTimer" /></div>
 </template>
 
 <script>
@@ -20,6 +20,7 @@ export default {
     return {
       timerInterval: null,
       timePassed: 0,
+      timer: false,
     }
   },
   computed: {
@@ -27,22 +28,23 @@ export default {
       return this.timeLimit - this.timePassed
     },
   },
-  mounted() {
-    this.startTimer()
-  },
   methods: {
     startTimer() {
+      this.timer = true
       this.timePassed = 0
       this.timerInterval = setInterval(() => this.tickOrResetTimer(), 1000)
     },
     pauseTimer() {
-      this.timerInterval = setInterval(null)
+      this.timer = false
+      clearInterval(this.timerInterval)
     },
     resumeTimer() {
+      this.timer = true
       this.timerInterval = setInterval(() => this.tickOrResetTimer(), 1000)
     },
     resetTimer() {
-      this.timerInterval = setInterval(null)
+      this.timer = false
+      clearInterval(this.timerInterval)
       this.timePassed = 0
     },
     tickOrResetTimer() {
@@ -50,6 +52,13 @@ export default {
         this.resetTimer()
       } else {
         this.timePassed += 1
+      }
+    },
+    toggleTimer() {
+      if (this.timer) {
+        this.pauseTimer()
+      } else {
+        this.resumeTimer()
       }
     },
   },
