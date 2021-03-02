@@ -3,6 +3,7 @@
     :width="width"
     :text="text"
     :success-text="successText"
+    background="transparent"
   ></drag-verify>
 </template>
 
