@@ -1,6 +1,8 @@
 <template>
   <a class="cursor-pointer" @click="$emit('toggle')">
-    <div class="base-timer rounded-full hover:shadow-2xl active:shadow-inner">
+    <div
+      class="base-timer rounded-full shadow-lg hover:shadow-2xl active:shadow-inner"
+    >
       <svg
         class="base-timer__svg"
         viewBox="0 0 100 100"
