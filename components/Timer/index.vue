@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-red-700 cursor-pointer text-4xl w-auto flex border-0 p-0 m-0">
+  <div class="text-white cursor-pointer text-4xl w-auto flex border-0 p-0 m-0">
     <BaseTimer :time-stat="timeStat" @toggle="toggleTimer" />
   </div>
 </template>

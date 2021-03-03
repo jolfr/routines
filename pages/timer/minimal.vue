@@ -1,10 +1,10 @@
 <template>
-  <div class="flex-row justify-self-center h-screen bg-blue-400">
-    <div class="flex bg-indigo-900">
-      <Timer time-limit="300" />
+  <div class="flex-row h-screen justify-end bg-red-700">
+    <div class="flex">
+      <Timer time-limit="300" class="mx-auto" />
     </div>
-    <div class="flex bg-indigo-900">
-      <NextTask />
+    <div class="flex">
+      <NextTask width="300" class="mx-auto" />
     </div>
   </div>
 </template>
