@@ -20,7 +20,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vue-tooltip.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -31,6 +31,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // fontawesome
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,6 +61,12 @@ export default {
     stories: [],
     webpackFinal(config) {
       return config
+    },
+  },
+
+  fontawesome: {
+    icons: {
+      solid: ['faArrowCircleLeft', 'faArrowCircleRight'],
     },
   },
 }
